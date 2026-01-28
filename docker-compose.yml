@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  backend:
+    container_name: simulator_backend
+    build:
+      context: ./hos-eld-trip-planner
+      dockerfile: Dockerfile
+    expose:
+      - "8000"
+    environment:
+      - DEBUG=${DEBUG:-False}
+      - SECRET_KEY=${SECRET_KEY}
+    ports:
+      - "8000:8000"
