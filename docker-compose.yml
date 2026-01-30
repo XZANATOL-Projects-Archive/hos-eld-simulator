@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   backend:
-    container_name: simulator_backend
+    container_name: hos_eld_simulator_backend
     build:
       context: ./hos-eld-trip-planner
       dockerfile: Dockerfile
@@ -11,5 +11,23 @@ services:
     environment:
       - DEBUG=${DEBUG:-False}
       - SECRET_KEY=${SECRET_KEY}
-    ports:
-      - "8000:8000"
+    # ports:
+    #   - "8000:8000"
+
+  frontend:
+    container_name: hos_eld_simulator_frontend
+    build:
+      context: ./hos-eld-trip-visualizer
+      dockerfile: Dockerfile
+      args:
+        - BACKEND_URL=${BACKEND_URL}
+        - NEXT_PUBLIC_GEOPIFY_KEY=${NEXT_PUBLIC_GEOPIFY_KEY}
+    environment:
+      - BACKEND_URL=${BACKEND_URL}
+      - NEXT_PUBLIC_GEOPIFY_KEY=${NEXT_PUBLIC_GEOPIFY_KEY}
+    expose:
+      - "3000"
+    depends_on:
+      - backend
+    # ports:
+    #   - "3000:3000"
