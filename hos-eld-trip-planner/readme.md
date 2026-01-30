@@ -100,20 +100,24 @@ sequenceDiagram
 ```mermaid
 classDiagram
     class TripSimulator {
-        +float dist_btwn_current_and_pickup
-        +float dist_btwn_pickup_and_dropoff
+        +Route dist_btwn_current_and_pickup
+        +Route dist_btwn_pickup_and_dropoff
         +float cycles_used
         +float hrs_remain
         +int day
         +list days
-        +list logs
+        +dict current_day
+        +float daily_driving
+        +float duty_window
+        +float driving_since
         +float drove_dist_bfr_fuel
         
         +__init__(dist_btwn_current_and_pickup, dist_btwn_pickup_and_dropoff, cycles_used)
         +simulate() dict
         -_calculate_remaining_hrs()
+        -_start_new_day()
+        -_end_day()
         -_simulate_route(route)
-        -_simulate_day(route)
         -_add_event(day_log, status, duration, **meta)
         -_add_on_duty_event(duration, label)
         -_failure(reason) dict
