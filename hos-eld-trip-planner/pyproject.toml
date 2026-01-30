@@ -5,7 +5,7 @@ description = "HOS Compliant ELD Trip Planner"
 authors = [
     {name = "XZANATOL", email = "abdelrahmanbedox@gmail.com"},
 ]
-dependencies = ["django>=6.0.1", "djangorestframework>=3.16.1", "pytest>=9.0.2", "gunicorn>=24.1.1"]
+dependencies = ["django>=6.0.1", "djangorestframework>=3.16.1", "pytest>=9.0.2", "gunicorn>=24.1.1", "whitenoise>=6.11.0"]
 requires-python = "==3.12.*"
 readme = "README.md"
 license = {text = "MIT"}

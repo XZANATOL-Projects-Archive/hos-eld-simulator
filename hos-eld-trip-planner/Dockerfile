@@ -29,6 +29,8 @@ ARG SECRET_KEY
 ENV DEBUG=${DEBUG}
 ENV SECRET_KEY=${SECRET_KEY}
 
+RUN pdm run python hos_eld_trip_planner/manage.py collectstatic --noinput
+
 # Run Django server
 # We use --chdir to switch into the source directory where manage.py and the package are located
 CMD ["pdm", "run", "gunicorn", "--chdir", "hos_eld_trip_planner", "hos_eld_trip_planner.wsgi:application", "--bind", "0.0.0.0:8000"]
