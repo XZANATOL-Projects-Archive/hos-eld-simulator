@@ -7,17 +7,6 @@ class Route:
 
 
 class TripSimulator:
-    ddist_btwn_current_and_pickup: float
-    dist_btwn_pickup_and_dropoff: float
-    cycles_used: float
-    hrs_remain: float
-    day: int = 1
-    days: list = []
-    logs: list = []
-
-    # counter: total drove miles during the whole simulation
-    drove_dist_bfr_fuel = 0
-
     def __init__(
         self,
         dist_btwn_current_and_pickup: float,
@@ -28,10 +17,14 @@ class TripSimulator:
         self.dist_btwn_pickup_and_dropoff = Route(dist_btwn_pickup_and_dropoff)
         self.cycles_used = cycles_used
 
+        self.day = 1
+        self.days = []
+
         self.current_day = None
         self.daily_driving = 0
         self.duty_window = 0
         self.driving_since = 0
+        self.drove_dist_bfr_fuel = 0
 
         self._calculate_remaining_hrs()
 
