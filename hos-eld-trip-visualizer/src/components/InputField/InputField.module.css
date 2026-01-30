@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.label {
+    color: #efefef;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.input {
+    background-color: var(--input-bg);
+    color: #efefef;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #3b5a7a;
+}

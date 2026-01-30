@@ -1,0 +1,104 @@
+.mainContainer {
+    padding: 2rem;
+    max-width: 1600px;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.headerContainer {
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logoBackground {
+    position: absolute;
+    left: -45px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    opacity: 0.1;
+    z-index: 0;
+    color: var(--primary-color, #efefef);
+    pointer-events: none;
+}
+
+.title {
+    position: relative;
+    z-index: 1;
+    color: #efefef;
+    font-weight: 700;
+    margin: 0;
+}
+
+.inputsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.inputRow {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.mapStatus {
+    text-align: center;
+    color: #efefef;
+    margin-bottom: 1rem;
+}
+
+.mapWrapper {
+    height: 100%;
+    width: 100%;
+    min-height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    display: flex;
+}
+
+.eldTableContainer {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #374151;
+    border-radius: 8px;
+}
+
+.eldTable th {
+    position: sticky;
+    top: 0;
+    background-color: #374151 !important;
+    color: #efefef;
+    font-weight: 700;
+    z-index: 10;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.eldTable td {
+    text-align: center;
+    vertical-align: middle;
+    color: #efefef;
+    background-color: #1f2937;
+    border-color: #374151;
+
+    p {
+        color: #efefef;
+    }
+}
+
+.dayColumn {
+    width: 50px;
+    max-width: 50px;
+}

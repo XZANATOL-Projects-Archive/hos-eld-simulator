@@ -1,11 +1,11 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 :root {
-  --background: #141420; /* Dark purple/black background from design */
-  --foreground: #ffffff;
-  --primary-color: #8a2be2; /* Purple accent */
-  --input-bg: #1f1f2e;
-  --input-border: #2e2e42;
+  --background: #111A22; /* User requested background */
+  --foreground: #efefef; /* User requested text color */
+  --separator: #233648; /* User requested separators & borders */
+  --input-bg: #111A22;
+  --input-border: #233648;
 }
 
 body {

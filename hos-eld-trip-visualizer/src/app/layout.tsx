@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "EasyGenerator Auth",
-  description: "Secure Authentication App",
+  title: "HOS ELD Trip Visualizer",
+  description: "HOS ELD Trip Visualizer",
 };
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-          {children}
+        {children}
       </body>
     </html>
   );

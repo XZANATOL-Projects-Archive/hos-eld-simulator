@@ -1,8 +1,12 @@
-export default async function Home() {
+import DispatchLogDashboard from '../components/DispatchLog/DispatchLogDashboard';
+import { MapProvider } from '../context/MapContext';
 
+export default function Home() {
   return (
-    <main>
-      <h1>Hello World</h1>
+    <main className="min-vh-100 d-flex flex-column">
+      <MapProvider>
+        <DispatchLogDashboard />
+      </MapProvider>
     </main>
   );
 }
