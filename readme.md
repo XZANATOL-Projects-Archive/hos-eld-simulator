@@ -15,6 +15,7 @@ For detailed documentation on each component, please refer to their respective R
 
 *   [Backend Documentation](./hos-eld-trip-planner/readme.md)
 *   [Frontend Documentation](./hos-eld-trip-visualizer/readme.md)
+*   [Design Document](./Design%20Document.md)
 
 ## Tech Stack
 
